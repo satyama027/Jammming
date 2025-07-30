@@ -1,22 +1,40 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import results from './results';
-import searchbox from './searchbox';
-import addedSongs from './addedSongs';
+import Results from './results';
+import Searchbox from './searchbox';
+import AddedSongs from './addedSongs';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const apiResult = [
+    {
+      id: 1,
+      name: "Bohemian Rhapsody",
+      artist: "Queen",
+      album: "A Night at the Opera"
+    },
+    {
+      id: 2,
+      name: "Billie Jean",
+      artist: "Michael Jackson",
+      album: "Thriller"
+    },
+    {
+      id: 3,
+      name: "Hey Jude",
+      artist: "The Beatles",
+      album: "The Beatles Again"
+    }
+  ];
+  const [searchResults, setSearchResults]=useState(apiResult);
 
   return (
     <>
       <h1 id="title">Ja<span>mmm</span>ing</h1>
       <div id="container">
-        <div>{searchbox()}</div>  
+        <div><searchbox /></div>  
         <div id="itemContainer">
-          {results()}
-          {addedSongs()}
+          <Results searchResults={searchResults} />
+          {AddedSongs()}
         </div>
       </div>
     </>
