@@ -1,11 +1,13 @@
-import Track from './track'
+import Track from './Track'
 
-function TrackList(props) {
+// TrackList component
+function Tracklist(props) {
     return(
-        props.searchResults.map((track)=>{
-           return <Track trackName={track.name} trackAlbum={track.album} trackArtist={track.artist} /> 
+        // Maps through the trackArray and renders a Track component for each track
+        props.trackArray.map((track)=>{
+           return <Track key={track.id} trackId={track.id} trackName={track.name} trackAlbum={track.album} trackArtist={track.artist} displayAddButton={props.displayAddButton} addTrackToPlaylist={props.addTrackToPlaylist} /> 
         })
     );
 }
 
-export default TrackList;
+export default Tracklist;

@@ -1,10 +1,12 @@
-import TrackList from './tracklist';
+import TrackList from './Tracklist';
 
+// Results component
 function Results(props){
     return (
-        <div class="itemBox">
+        <div className="itemBox">
             <h2>Results</h2>
-            <TrackList searchResults={props.searchResults} />
+            {/* Displays the tracklist with add buttons */}
+            <TrackList trackArray={props.searchResults} displayAddButton={true} addTrackToPlaylist={props.addTrackToPlaylist} />
         </div>
     );
 }

@@ -3,7 +3,7 @@
   height: 100%;
   margin: 0 auto;
   text-align: center;
-  background-color: darkblue;
+  background-color: #0c0b45;
 }
 
 #container{
@@ -63,16 +63,61 @@
 .itemBox{
   height: 600px;
   width: 600px;
-  background-color: darkblue;
+  background-color: #0c0b45;
   margin: 50px;
   border: 3px solid black;
   text-align: left;
+  opacity: 0.9;
+  display: flex;
+  flex-direction: column;
 }
 
 .itemBox h2{
-  margin: 0;
+  margin: 0.5rem;
+  padding: 0;
 }
 
 .track{
   border-bottom: white solid 1px;
+  margin: 0 0.5rem 0.25rem 0.5rem;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.track h3{
+  margin: 0;
+}
+
+.track button{
+  background: none;
+  display: inline-flex;
+  align-self: flex-end;
+}
+
+.track button:hover{
+  border:none;
+  color: lightgrey;
+}
+
+.itemBox .textInput{
+  background: none;
+  border: none;
+  border-bottom: white solid 1px;
+  margin: 0 0.5rem;
+  padding: 0.5rem;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.itemBox .textInput:focus{
+  outline: none;
+  border-bottom: white solid 1px;
+}
+
+.itemBox .button{
+  background-color: #7345de;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
